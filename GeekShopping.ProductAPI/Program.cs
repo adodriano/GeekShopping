@@ -1,3 +1,5 @@
+using AutoMapper;
+using GeekShopping.ProductAPI.Config;
 using GeekShopping.ProductAPI.Model.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +16,12 @@ builder.Services.AddControllers();
 
 // Configure DbContext with SQL Server
 builder.Services.AddDbContext<SqlContext>(options => options.UseSqlServer(connectionString));
+
+// Configure auto mapper
+IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+builder.Services.AddSingleton(mapper);
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

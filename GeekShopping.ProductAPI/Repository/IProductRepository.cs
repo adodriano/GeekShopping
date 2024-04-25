@@ -1,4 +1,8 @@
 ﻿using GeekShopping.ProductAPI.Data.ValueObjects;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace GeekShopping.ProductAPI.Repository
 {
@@ -9,6 +13,5 @@ namespace GeekShopping.ProductAPI.Repository
         Task<ProductVO> Create(ProductVO vo);
         Task<ProductVO> Update(ProductVO vo);
         Task<bool> Delete(long id);
-
     }
 }

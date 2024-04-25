@@ -1,6 +1,6 @@
-﻿using GeekShopping.ProductAPI.Model.Base;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using GeekShopping.ProductAPI.Model.Base;
 
 namespace GeekShopping.ProductAPI.Model
 {
@@ -27,6 +27,6 @@ namespace GeekShopping.ProductAPI.Model
 
         [Column("image_url")]
         [StringLength(300)]
-        public string ImageUrl { get; set; }
+        public string ImageURL { get; set; }
     }
 }

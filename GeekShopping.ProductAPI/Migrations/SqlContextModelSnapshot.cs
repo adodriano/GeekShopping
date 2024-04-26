@@ -55,6 +55,7 @@ namespace GeekShopping.ProductAPI.Migrations
                         .HasColumnName("name");
 
                     b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)")
                         .HasColumnName("price");
 

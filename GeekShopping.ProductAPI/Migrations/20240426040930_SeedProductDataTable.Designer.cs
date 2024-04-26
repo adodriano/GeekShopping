@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeekShopping.ProductAPI.Migrations
 {
     [DbContext(typeof(SQLContext))]
-    [Migration("20240424214609_AddProductDataTableOnDB")]
-    partial class AddProductDataTableOnDB
+    [Migration("20240426040930_SeedProductDataTable")]
+    partial class SeedProductDataTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -58,6 +58,7 @@ namespace GeekShopping.ProductAPI.Migrations
                         .HasColumnName("name");
 
                     b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)")
                         .HasColumnName("price");
 
